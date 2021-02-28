@@ -2,12 +2,13 @@
 console.log("working");
 
 // Create the map object with a center and zoom level.
+// Create the map object with a center and zoom level.
 let map = L.map('mapid').setView([40.7, -94.5], 4);
 
 // We create the tile layer that will be the background of our map.
 let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/{style}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 100,
+    maxZoom: 10,
     id: 'mapbox.run-bike-hike',
     style: "streets-v11",
     accessToken: API_KEY
@@ -16,12 +17,6 @@ let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/{style}/tiles
 // Then we add our 'graymap' tile layer to the map.
 streets.addTo(map);
 
-//  Add a marker to the map for Los Angeles, California.
-let marker = L.marker([34.0522, -118.2437]).addTo(map);
-
-L.circle([34.0522, -118.2437], {
-    radius: 100000
- }).addTo(map);
 
 // TOOLS
 // https://docs.mapbox.com/help/glossary/
