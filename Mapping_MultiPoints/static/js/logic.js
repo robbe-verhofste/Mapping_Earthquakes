@@ -68,11 +68,23 @@ let cities = [{
         L.marker(city.location)
             .bindPopup("<h2>" + city.city + ", " + city.state + "</h2> <hr> <h3>Population " + city.population.toLocaleString() + "</h3>")
                 .addTo(map);
+        // let line = [[city.location]];
+        // L.polyline(line, {
+        //     color: "red"
+        // }).addTo(map);
     });
 
 
-
-
+    let line = [
+        [33.9416, -118.4085],
+        [37.6213, -122.3790]
+      ];
+    
+// Create a polyline using the line coordinates and make the line red.
+L.polyline(line, {
+    color: "red"
+  }).addTo(map);
+  
 // TOOLS
 // https://docs.mapbox.com/help/glossary/
 
