@@ -1,5 +1,0 @@
-# $ cat .gitignore
-# # exclude everything except directory 
-# /*
-# !/Earthquake_Challenge
-# /Earthquake_Challenge/*
