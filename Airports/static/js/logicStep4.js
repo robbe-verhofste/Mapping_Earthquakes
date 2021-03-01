@@ -144,9 +144,9 @@ div.innerHTML = 'Eathquake<br>Magnitude<br><hr>'
 
   // 3. Use d3.json to make a call to get our Tectonic Plate geoJSON data.
   d3.json("https://raw.githubusercontent.fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json")
-  .then(function(platedata){
-      console.log(platedata);
-    L.geoJson(platedata, {
+  .then(function(plates){
+      console.log(plates);
+    L.geoJson(plates, {
       color: "orange",
       weight: 3
     })
